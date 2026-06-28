@@ -8,6 +8,7 @@ export interface PersonalInfo {
   phone: string;
   githubUrl: string;
   linkedinUrl: string;
+  leetcodeUrl: string;
   resumeUrl: string;
   about: string;
 }

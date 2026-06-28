@@ -1,7 +1,7 @@
 .footer {
   border-top: 1px solid var(--border-color);
   padding: 32px 0;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 .footer-inner {
@@ -21,7 +21,7 @@
 }
 
 .footer-logo .logo-bracket {
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 .footer-logo:hover {
@@ -52,7 +52,7 @@
 }
 
 .footer-socials a:hover {
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 @media (max-width: 600px) {
@@ -60,4 +60,15 @@
     flex-direction: column;
     text-align: center;
   }
+}
+
+.footer-code-link {
+  width: 22px;
+  height: 22px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  justify-content: center;
+  font-size: 0.68rem;
+  font-weight: 900;
+  font-family: var(--font-mono);
 }

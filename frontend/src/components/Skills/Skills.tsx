@@ -24,14 +24,14 @@ export default function Skills({ skills }: SkillsProps) {
     return acc
   }, {})
 
-  const categoryOrder = ['Backend', 'Frontend', 'Database', 'Tools', 'Cloud']
+  const categoryOrder = ['Languages', 'Backend', 'Performance', 'Databases', 'Cloud & DevOps', 'AI Workflows', 'Testing & Tools', 'Core Concepts']
   const orderedCategories = categoryOrder.filter(c => grouped[c])
 
   return (
     <section id="skills" ref={ref}>
       <div className="container">
         <h2 className="section-title fade-in">Skills & Technologies</h2>
-        <p className="section-subtitle fade-in">Tools and technologies I work with</p>
+        <p className="section-subtitle fade-in">Resume-backed tools, systems, and engineering workflows</p>
 
         <div className="skills-grid">
           {orderedCategories.map(category => (

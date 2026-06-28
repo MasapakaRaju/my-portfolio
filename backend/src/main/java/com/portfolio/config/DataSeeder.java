@@ -40,56 +40,74 @@ public class DataSeeder implements CommandLineRunner {
     private void seedPersonalInfo() {
         PersonalInfo info = new PersonalInfo();
         info.setName("Masapaka Raju");
-        info.setTitle("Backend Engineer");
-        info.setTagline("Building reliable, high-performance enterprise applications");
-        info.setLocation("India");
+        info.setTitle("Java Backend Engineer");
+        info.setTagline("Building high-throughput backend systems with Java, Spring Boot, event-driven design, and AI-assisted engineering workflows.");
+        info.setLocation("Hyderabad, Telangana, India");
         info.setEmail("masapakaraju28@gmail.com");
         info.setPhone("+91 9515281863");
         info.setGithubUrl("https://github.com/MasapakaRaju");
         info.setLinkedinUrl("https://linkedin.com/in/raju-m-588343250/");
+        info.setLeetcodeUrl("https://leetcode.com/u/rajumasapaka/");
         info.setResumeUrl("#");
         info.setAbout(
-            "Backend Engineer with experience in designing and developing scalable REST APIs " +
-            "using Spring Boot and Java. Strong expertise in building microservices-based " +
-            "applications, working with SQL databases, and applying object-oriented design " +
-            "principles. Experienced in Agile development environments, cloud-based architectures, " +
-            "and distributed systems. Passionate about building reliable, high-performance " +
-            "enterprise applications. " +
-            "Achievements: Solved 100+ DSA problems on LeetCode · A Grade in AMCAT · " +
-            "HackerRank Java & SQL Certifications · B.Tech IT, CVR College of Engineering (CGPA: 7.7)"
+            "Java Backend Engineer with 1+ year of experience owning the full development lifecycle for scalable, " +
+            "high-throughput backend systems using Java, Spring Boot, RESTful services, and SQL optimization. " +
+            "Experienced in microservices, event processing, multithreading, system integration, Docker/Kubernetes deployments, " +
+            "and production AI coding workflows with Claude Code, GitHub Copilot, and ChatGPT. Strong foundation in OOP, " +
+            "DBMS, data structures, algorithms, enterprise integration patterns, and performance-focused backend design."
         );
         personalInfoRepository.save(info);
     }
 
     private void seedSkills() {
         List<Skill> skills = Arrays.asList(
-            // Backend
-            new Skill(null, "Java", "Backend", 90),
-            new Skill(null, "Spring Boot", "Backend", 85),
-            new Skill(null, "RESTful APIs", "Backend", 85),
-            new Skill(null, "Microservices", "Backend", 80),
-            // Frontend
-            new Skill(null, "React", "Frontend", 65),
-            new Skill(null, "Angular", "Frontend", 60),
-            // Database
-            new Skill(null, "PostgreSQL", "Database", 80),
-            new Skill(null, "MySQL", "Database", 80),
-            new Skill(null, "Database Design", "Database", 75),
-            // Testing
-            new Skill(null, "JUnit", "Testing", 75),
-            new Skill(null, "TestNG", "Testing", 70),
-            // DevOps & Tools
-            new Skill(null, "Docker", "DevOps", 80),
-            new Skill(null, "Kubernetes", "DevOps", 75),
-            new Skill(null, "Git", "DevOps", 85),
-            new Skill(null, "Jenkins", "DevOps", 70),
-            new Skill(null, "Maven", "DevOps", 80),
-            // Core
-            new Skill(null, "OOP", "Core Concepts", 90),
-            new Skill(null, "Data Structures", "Core Concepts", 80),
-            new Skill(null, "System Design", "Core Concepts", 75),
-            new Skill(null, "Distributed Systems", "Core Concepts", 75),
-            new Skill(null, "Linux/Unix", "Core Concepts", 75)
+            new Skill(null, "Java", "Languages", 92),
+            new Skill(null, "Python", "Languages", 72),
+            new Skill(null, "SQL", "Languages", 86),
+            new Skill(null, "JavaScript", "Languages", 72),
+
+            new Skill(null, "Spring Boot", "Backend", 90),
+            new Skill(null, "RESTful/Web Services", "Backend", 90),
+            new Skill(null, "Microservices", "Backend", 84),
+            new Skill(null, "MVC Architecture", "Backend", 82),
+            new Skill(null, "System Integration", "Backend", 82),
+            new Skill(null, "Software Design", "Backend", 80),
+
+            new Skill(null, "Multithreading", "Performance", 84),
+            new Skill(null, "Event Processing", "Performance", 82),
+            new Skill(null, "Distributed Systems", "Performance", 78),
+            new Skill(null, "Low-Latency Design", "Performance", 76),
+            new Skill(null, "High-Throughput APIs", "Performance", 84),
+
+            new Skill(null, "MySQL", "Databases", 86),
+            new Skill(null, "PostgreSQL", "Databases", 84),
+            new Skill(null, "SQL Query Optimization", "Databases", 86),
+            new Skill(null, "Redis", "Databases", 62),
+            new Skill(null, "Database Management", "Databases", 80),
+
+            new Skill(null, "Docker", "Cloud & DevOps", 82),
+            new Skill(null, "Kubernetes", "Cloud & DevOps", 76),
+            new Skill(null, "CI/CD Pipelines", "Cloud & DevOps", 76),
+            new Skill(null, "Jenkins", "Cloud & DevOps", 72),
+            new Skill(null, "Kafka", "Cloud & DevOps", 62),
+
+            new Skill(null, "Claude Code", "AI Workflows", 88),
+            new Skill(null, "GitHub Copilot", "AI Workflows", 84),
+            new Skill(null, "ChatGPT", "AI Workflows", 86),
+            new Skill(null, "AI Code Review", "AI Workflows", 82),
+
+            new Skill(null, "JUnit", "Testing & Tools", 78),
+            new Skill(null, "TestNG", "Testing & Tools", 74),
+            new Skill(null, "Postman", "Testing & Tools", 82),
+            new Skill(null, "Git", "Testing & Tools", 86),
+            new Skill(null, "Maven", "Testing & Tools", 84),
+            new Skill(null, "IntelliJ IDEA", "Testing & Tools", 86),
+
+            new Skill(null, "OOP", "Core Concepts", 92),
+            new Skill(null, "Data Structures", "Core Concepts", 84),
+            new Skill(null, "Algorithms", "Core Concepts", 82),
+            new Skill(null, "DBMS", "Core Concepts", 84),
+            new Skill(null, "Exception Handling", "Core Concepts", 84)
         );
         skillRepository.saveAll(skills);
     }
@@ -98,47 +116,60 @@ public class DataSeeder implements CommandLineRunner {
         Experience exp1 = new Experience();
         exp1.setCompany("OpenText");
         exp1.setRole("Associate Engineer");
-        exp1.setLocation("India");
+        exp1.setLocation("Bangalore, India");
         exp1.setStartDate("Aug 2025");
         exp1.setEndDate("Mar 2026");
         exp1.setIsCurrent(false);
-        exp1.setDescription("Developed scalable enterprise applications in the Micro Focus ZENworks system using Spring Boot microservices.");
+        exp1.setDescription("Owned backend API and microservice delivery across design, coding, testing, deployment, optimization, and production readiness.");
         exp1.setHighlights(Arrays.asList(
-            "Developed scalable RESTful APIs using Spring Boot following microservices architecture and enterprise design patterns",
-            "Analysed and fixed security vulnerabilities flagged by Black Duck Software Composition Analysis in third-party dependencies, ensuring license compliance",
-            "Developed a dynamic filtering API for patch data using user-defined parameters, optimizing database queries and improving accuracy of results in the ZENworks system",
-            "Performed system debugging and root cause analysis in distributed environments, improving system reliability",
-            "Containerized applications using Docker and worked with Kubernetes for deployment in cloud-based environments",
-            "Collaborated with cross-functional teams in an Agile environment to deliver features and enhancements"
+            "Owned the full development lifecycle for 12+ scalable RESTful APIs and microservices using Java and Spring Boot",
+            "Integrated Claude Code, GitHub Copilot, and ChatGPT into planning, technical design, code generation, testing, and code/security review workflows",
+            "Built backend infrastructure for high-volume data processing and request workflows using multithreading and event-driven patterns",
+            "Resolved 15+ system bottlenecks and security vulnerabilities through Black Duck analysis, improving reliability and dependency compliance",
+            "Optimized 20+ SQL queries and backend workflows to reduce API response latency across high-throughput services",
+            "Supported Docker and Kubernetes cloud-native deployments with CI/CD pipelines for high-availability backend infrastructure"
         ));
         exp1.setDisplayOrder(1);
 
         Experience exp2 = new Experience();
         exp2.setCompany("OpenText");
         exp2.setRole("Engineering Intern");
-        exp2.setLocation("India");
+        exp2.setLocation("Bangalore, India");
         exp2.setStartDate("Mar 2025");
         exp2.setEndDate("Aug 2025");
         exp2.setIsCurrent(false);
-        exp2.setDescription("Worked on the XCP product team automating internal workflows and UI processes.");
+        exp2.setDescription("Automated internal workflows and improved UI testing reliability for engineering teams.");
         exp2.setHighlights(Arrays.asList(
-            "Developed automation scripts to streamline internal workflows, reducing manual intervention and improving process efficiency",
-            "Automated repetitive UI processes using Playwright, reducing manual effort and improving operational efficiency"
+            "Automated 10+ internal operational workflows end-to-end, reducing repetitive manual effort using Java backend services",
+            "Streamlined UI testing pipelines using Playwright, improving execution consistency and reducing testing time by 30%"
         ));
         exp2.setDisplayOrder(2);
 
-        experienceRepository.saveAll(Arrays.asList(exp1, exp2));
+        Experience exp3 = new Experience();
+        exp3.setCompany("Argonix Labs");
+        exp3.setRole("Software Engineering Intern");
+        exp3.setLocation("Remote");
+        exp3.setStartDate("Apr 2024");
+        exp3.setEndDate("Jun 2024");
+        exp3.setIsCurrent(false);
+        exp3.setDescription("Contributed to backend utilities, REST API integrations, and SQL-driven data processing systems.");
+        exp3.setHighlights(Arrays.asList(
+            "Built and improved backend utilities supporting REST API integrations and SQL-driven data workflows",
+            "Worked with data processing systems handling 2K+ structured records"
+        ));
+        exp3.setDisplayOrder(3);
+
+        experienceRepository.saveAll(Arrays.asList(exp1, exp2, exp3));
     }
 
     private void seedProjects() {
         Project p1 = new Project();
-        p1.setName("IoT-Based Object Detection System");
+        p1.setName("REST API Filtering Engine");
         p1.setDescription(
-            "Designed and implemented an event-driven system for real-time object detection. " +
-            "Demonstrates understanding of distributed system concepts including event streaming, " +
-            "asynchronous processing, and IoT device integration."
+            "Designed a dynamic filtering and pagination backend service for 10K+ structured records, " +
+            "focused on scalable request handling, optimized SQL queries, and high-throughput API performance."
         );
-        p1.setTechStack("IoT,Event-Driven Architecture,Distributed Systems,Real-Time Processing");
+        p1.setTechStack("Spring Boot,Java,REST APIs,SQL Optimization,Pagination,Backend Performance");
         p1.setGithubUrl("https://github.com/MasapakaRaju");
         p1.setDemoUrl("#");
         p1.setIsFeatured(true);
@@ -147,29 +178,39 @@ public class DataSeeder implements CommandLineRunner {
         Project p2 = new Project();
         p2.setName("Task Management Web Application");
         p2.setDescription(
-            "Full-stack task management app built with the MERN stack featuring user authentication, " +
-            "CRUD operations, and a dynamic frontend interface. Includes REST API design and " +
-            "role-based access control."
+            "Built a full-stack task management platform with authentication, CRUD operations, " +
+            "and RESTful API integration designed for 50+ simulated users."
         );
-        p2.setTechStack("MongoDB,Express,React,Node.js,REST APIs,JWT");
+        p2.setTechStack("MongoDB,Express,React,Node.js,REST APIs,Authentication,CRUD");
         p2.setGithubUrl("https://github.com/MasapakaRaju");
         p2.setDemoUrl("#");
         p2.setIsFeatured(true);
         p2.setDisplayOrder(2);
 
         Project p3 = new Project();
-        p3.setName("Portfolio Website");
+        p3.setName("Flappy Bird Game Development");
         p3.setDescription(
-            "This portfolio — a full-stack application with a Spring Boot REST API backend, " +
-            "React + TypeScript frontend, and PostgreSQL database. Containerized with Docker " +
-            "and orchestrated with Kubernetes."
+            "Built an interactive desktop game using Java AWT and Swing, applying event-driven architecture, " +
+            "real-time processing, collision logic, and responsive keyboard controls."
         );
-        p3.setTechStack("Spring Boot,Java,React,TypeScript,PostgreSQL,Docker,Kubernetes");
+        p3.setTechStack("Java,AWT,Swing,Event-Driven Architecture,Real-Time Processing");
         p3.setGithubUrl("https://github.com/MasapakaRaju");
         p3.setDemoUrl("#");
-        p3.setIsFeatured(true);
+        p3.setIsFeatured(false);
         p3.setDisplayOrder(3);
 
-        projectRepository.saveAll(Arrays.asList(p1, p2, p3));
+        Project p4 = new Project();
+        p4.setName("Cloud Portfolio Platform");
+        p4.setDescription(
+            "Full-stack portfolio platform powered by a Spring Boot REST API, React + TypeScript frontend, " +
+            "PostgreSQL persistence, Docker builds, Render backend deployment, and Netlify frontend delivery."
+        );
+        p4.setTechStack("Spring Boot,React,TypeScript,PostgreSQL,Docker,Render,Netlify");
+        p4.setGithubUrl("https://github.com/MasapakaRaju/my-portfolio");
+        p4.setDemoUrl("#");
+        p4.setIsFeatured(true);
+        p4.setDisplayOrder(4);
+
+        projectRepository.saveAll(Arrays.asList(p1, p2, p3, p4));
     }
 }

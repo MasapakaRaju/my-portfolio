@@ -1,10 +1,10 @@
 section#experience {
-  background: var(--bg-secondary);
+  background: linear-gradient(180deg, rgba(16, 22, 26, 0.92), rgba(11, 15, 18, 0.96));
 }
 
 .timeline {
   position: relative;
-  padding-left: 40px;
+  padding-left: 42px;
 }
 
 .timeline::before {
@@ -14,13 +14,13 @@ section#experience {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: linear-gradient(to bottom, var(--accent-purple), var(--accent-cyan));
+  background: linear-gradient(to bottom, var(--accent-teal), var(--accent-amber), var(--accent-coral));
   border-radius: 1px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .timeline-item:last-child {
@@ -29,27 +29,28 @@ section#experience {
 
 .timeline-dot {
   position: absolute;
-  left: -36px;
+  left: -40px;
   top: 24px;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
-  background: var(--accent-purple);
-  border: 3px solid var(--bg-secondary);
+  background: var(--accent-amber);
+  border: 4px solid var(--bg-secondary);
   z-index: 1;
+  box-shadow: 0 0 0 5px rgba(246, 196, 83, 0.12);
 }
 
 .dot-pulse {
   position: absolute;
-  inset: -4px;
+  inset: -6px;
   border-radius: 50%;
-  background: rgba(124, 109, 232, 0.3);
+  background: rgba(45, 212, 191, 0.25);
   animation: pulse 2s ease infinite;
 }
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.5); opacity: 0; }
+  50% { transform: scale(1.6); opacity: 0; }
 }
 
 .timeline-card {
@@ -57,11 +58,12 @@ section#experience {
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   padding: 28px;
-  transition: all var(--transition);
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .timeline-card:hover {
   border-color: var(--border-hover);
+  transform: translateX(6px);
   box-shadow: var(--shadow);
 }
 
@@ -76,15 +78,15 @@ section#experience {
 
 .exp-role {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 4px;
 }
 
 .exp-company {
   font-size: 0.95rem;
-  color: var(--accent-purple);
-  font-weight: 600;
+  color: var(--accent-teal);
+  font-weight: 800;
 }
 
 .exp-meta {
@@ -95,22 +97,22 @@ section#experience {
 }
 
 .exp-badge {
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: rgba(90, 90, 122, 0.3);
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(245, 241, 232, 0.08);
   color: var(--text-muted);
 }
 
 .exp-badge.current {
-  background: rgba(0, 212, 158, 0.15);
+  background: rgba(123, 216, 143, 0.15);
   color: var(--success);
 }
 
 .exp-dates {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: var(--accent-amber);
   font-family: var(--font-mono);
 }
 
@@ -138,19 +140,27 @@ section#experience {
   gap: 10px;
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .highlight-dot {
   flex-shrink: 0;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--accent-cyan);
-  margin-top: 6px;
+  background: var(--accent-coral);
+  margin-top: 7px;
 }
 
 @media (max-width: 600px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-dot {
+    left: -31px;
+  }
+
   .timeline-header {
     flex-direction: column;
   }

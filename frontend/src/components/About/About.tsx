@@ -7,10 +7,10 @@ interface AboutProps {
 }
 
 const stats = [
-  { label: 'Years Experience', value: '3+' },
-  { label: 'Projects Completed', value: '20+' },
-  { label: 'Technologies', value: '15+' },
-  { label: 'Happy Clients', value: '10+' },
+  { label: 'Backend Experience', value: '1+ yr' },
+  { label: 'Production APIs', value: '12+' },
+  { label: 'SQL Optimizations', value: '20+' },
+  { label: 'Records Processed', value: '10K+' },
 ]
 
 export default function About({ personalInfo }: AboutProps) {
@@ -29,16 +29,14 @@ export default function About({ personalInfo }: AboutProps) {
     <section id="about" ref={ref}>
       <div className="container">
         <h2 className="section-title fade-in">About Me</h2>
-        <p className="section-subtitle fade-in">A little bit about who I am</p>
+        <p className="section-subtitle fade-in">Engineer profile shaped by backend systems, scale, and AI-assisted delivery</p>
 
         <div className="about-grid">
           <div className="about-avatar fade-in">
-            <div className="avatar-placeholder">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-              </svg>
+            <div className="avatar-placeholder profile-mark">
+              <span>MR</span>
             </div>
-            <p className="avatar-hint">Replace with your photo</p>
+            <p className="avatar-hint">Java | Spring Boot | Systems</p>
           </div>
 
           <div className="about-text fade-in">
@@ -69,6 +67,9 @@ export default function About({ personalInfo }: AboutProps) {
               </a>
               <a href={personalInfo.linkedinUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
                 LinkedIn Profile
+              </a>
+              <a href={personalInfo.leetcodeUrl} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
+                LeetCode Profile
               </a>
             </div>
           </div>

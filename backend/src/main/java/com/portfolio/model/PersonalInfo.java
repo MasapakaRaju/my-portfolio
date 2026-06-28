@@ -24,6 +24,7 @@ public class PersonalInfo {
     private String phone;
     private String githubUrl;
     private String linkedinUrl;
+    private String leetcodeUrl;
     private String resumeUrl;
 
     @Column(columnDefinition = "TEXT")

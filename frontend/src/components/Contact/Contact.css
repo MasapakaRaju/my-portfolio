@@ -39,7 +39,7 @@ section#contact {
 }
 
 .contact-item:hover {
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 .contact-item-icon {
@@ -56,13 +56,13 @@ section#contact {
 }
 
 .contact-item:hover .contact-item-icon {
-  border-color: var(--accent-purple);
+  border-color: var(--accent-teal);
 }
 
 .contact-item-icon svg {
   width: 18px;
   height: 18px;
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 .contact-item-label {
@@ -104,8 +104,8 @@ section#contact {
 }
 
 .social-btn:hover {
-  border-color: var(--accent-purple);
-  color: var(--accent-purple);
+  border-color: var(--accent-teal);
+  color: var(--accent-teal);
   transform: translateY(-3px);
 }
 
@@ -159,7 +159,7 @@ section#contact {
 
 .form-group input:focus,
 .form-group textarea:focus {
-  border-color: var(--accent-purple);
+  border-color: var(--accent-teal);
   box-shadow: 0 0 0 3px rgba(124, 109, 232, 0.12);
 }
 
@@ -184,7 +184,7 @@ section#contact {
 
 .form-status.loading {
   background: rgba(124, 109, 232, 0.1);
-  color: var(--accent-purple);
+  color: var(--accent-teal);
   border: 1px solid rgba(124, 109, 232, 0.2);
 }
 

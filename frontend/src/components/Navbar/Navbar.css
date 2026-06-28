@@ -9,7 +9,7 @@
 }
 
 .navbar.scrolled {
-  background: rgba(13, 13, 26, 0.92);
+  background: rgba(11, 15, 18, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   padding: 14px 0;
@@ -34,11 +34,11 @@
 }
 
 .navbar-logo:hover {
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 .logo-bracket {
-  color: var(--accent-purple);
+  color: var(--accent-teal);
 }
 
 .navbar-nav {
@@ -58,7 +58,7 @@
 
 .nav-link:hover {
   color: var(--text-primary);
-  background: rgba(124, 109, 232, 0.1);
+  background: rgba(45, 212, 191, 0.1);
 }
 
 .hamburger {
