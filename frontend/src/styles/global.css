@@ -260,6 +260,22 @@ section {
   max-width: 500px;
 }
 
+.refresh-pill {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 1500;
+  padding: 10px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  background: rgba(11, 15, 18, 0.86);
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 800;
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

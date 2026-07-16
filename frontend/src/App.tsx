@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { fetchPortfolio } from './api/portfolio'
+import { cachePortfolio, fetchPortfolio, getCachedPortfolio } from './api/portfolio'
 import type { PortfolioData } from './types'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
@@ -15,13 +15,33 @@ import ScrollProgress from './components/Effects/ScrollProgress'
 export default function App() {
   const [data, setData] = useState<PortfolioData | null>(null)
   const [loading, setLoading] = useState(true)
+  const [refreshing, setRefreshing] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    const cached = getCachedPortfolio()
+
+    if (cached) {
+      setData(cached)
+      setLoading(false)
+      setRefreshing(true)
+    }
+
     fetchPortfolio()
-      .then(setData)
-      .catch(() => setError('Could not connect to the server. Please make sure the backend is running.'))
-      .finally(() => setLoading(false))
+      .then(freshData => {
+        cachePortfolio(freshData)
+        setData(freshData)
+        setError(null)
+      })
+      .catch(() => {
+        if (!cached) {
+          setError('The backend is waking up or temporarily unavailable. Please refresh in a minute.')
+        }
+      })
+      .finally(() => {
+        setLoading(false)
+        setRefreshing(false)
+      })
   }, [])
 
   if (loading) {
@@ -46,6 +66,7 @@ export default function App() {
     <>
       <ScrollProgress />
       <CustomCursor />
+      {refreshing && <div className="refresh-pill">Refreshing backend data...</div>}
       <Navbar name={data.personalInfo.name} />
       <main>
         <Hero personalInfo={data.personalInfo} />
