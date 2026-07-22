@@ -3,6 +3,35 @@
 > vite --host 127.0.0.1
 
 
-  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m1123[22m[2m[0m ms[22m
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m896[22m[2m[0m ms[22m
 
   [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m10:49:52 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.tsx[22m
+[2m10:49:52 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m10:49:52 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
+[2m10:51:49 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.tsx[22m
+[2m10:54:45 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.tsx[22m
+[2m10:54:45 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m10:56:56 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m10:57:11 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m10:58:13 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.tsx[22m
+[2m10:59:34 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.tsx[22m
+[2m10:59:45 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m10:59:50 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m11:00:04 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m11:00:09 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m11:00:18 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m11:00:29 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero/Hero.css[22m
+[2m11:02:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx[22m
+[2m11:02:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/styles/global.css[22m
+[2m11:02:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Effects/Effects.css[22m
+[2m11:03:05 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Effects/CustomCursor.tsx[22m
+[2m11:04:53 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.tsx[22m
+[2m11:04:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.tsx[22m
+[2m11:05:00 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.tsx[22m
+[2m11:05:15 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.tsx[22m
+[2m11:05:22 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.tsx[22m
+[2m11:06:21 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Navbar/Navbar.css[22m
+[2m11:15:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/App.tsx, /src/components/Contact/Contact.tsx[22m
+[2m11:15:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Contact/Contact.tsx[22m
+[2m11:15:57 am[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Contact/Contact.css[22m

@@ -1,0 +1,6 @@
+[2m10:41:59 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/portfolio[39m
+Error: getaddrinfo ENOTFOUND my-portfolio-backend-1b1v.onrender.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
+[2m10:41:59 am[22m [31m[1m[vite][22m[39m [31mhttp proxy error: /api/portfolio[39m
+Error: getaddrinfo ENOTFOUND my-portfolio-backend-1b1v.onrender.com
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:122:26)
