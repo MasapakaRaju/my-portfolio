@@ -227,12 +227,21 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Cache OWASP Dependency Check Data
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.dependency-check
+            ~/.m2/repository/org/owasp/dependency-check-data
+          key: dependency-check-${{ runner.os }}
+          restore-keys: |
+            dependency-check-
+
       - name: Run OWASP Dependency Check (Backend)
         working-directory: ./backend
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: mvn org.owasp:dependency-check-maven:check
-        continue-on-error: true
+        run: mvn dependency-check:check
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
