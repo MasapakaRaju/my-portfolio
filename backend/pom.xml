@@ -19,6 +19,7 @@
 
     <properties>
         <java.version>17</java.version>
+        <owasp.version>10.0.1</owasp.version>
     </properties>
 
     <repositories>
@@ -102,8 +103,17 @@
             <plugin>
                 <groupId>org.owasp</groupId>
                 <artifactId>dependency-check-maven</artifactId>
+                <version>${owasp.version}</version>
                 <configuration>
                     <nvdApiKey>${env.NVD_API_KEY}</nvdApiKey>
+                    <nvdApiDelay>6000</nvdApiDelay>
+                    <nvdApiMaxRetry>5</nvdApiMaxRetry>
+                    <failBuildOnCVSS>8</failBuildOnCVSS>
+                    <suppressionFiles>
+                        <suppressionFile>dependency-check-suppressions.xml</suppressionFile>
+                    </suppressionFiles>
+                    <dataDirectory>${user.home}/.m2/repository/org/owasp/dependency-check-data</dataDirectory>
+                    <keepUnusedScope>true</keepUnusedScope>
                 </configuration>
             </plugin>
         </plugins>
