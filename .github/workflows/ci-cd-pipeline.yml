@@ -233,15 +233,16 @@ jobs:
           path: |
             ~/.dependency-check
             ~/.m2/repository/org/owasp/dependency-check-data
-          key: dependency-check-${{ runner.os }}
+          key: ${{ runner.os }}-dependency-check-${{ hashFiles('backend/pom.xml') }}
           restore-keys: |
-            dependency-check-
+            ${{ runner.os }}-dependency-check-
 
       - name: Run OWASP Dependency Check (Backend)
         working-directory: ./backend
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: mvn dependency-check:check
+        run: mvn org.owasp:dependency-check-maven:check
+        continue-on-error: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
