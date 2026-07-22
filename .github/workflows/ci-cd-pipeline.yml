@@ -239,6 +239,15 @@ jobs:
             ghcr.io/${{ env.IMAGE_NAME }}/backend:${{ github.sha }}
 
 
+  deploy-render:
+    name: Deploy to Render
+    needs: docker-build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Trigger Render Deploy
+        run: |
+          curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK }}"
   # ==================== DEPLOYMENT ====================
   deploy-to-github-pages:
     name: Deploy to GitHub Pages
