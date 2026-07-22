@@ -23,18 +23,28 @@ export default function Navbar({ name }: NavbarProps) {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const handleLinkClick = () => setMenuOpen(false)
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    setMenuOpen(false)
+
+    const id = href.replace('#', '')
+    const el = document.getElementById(id)
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' })
+      history.pushState(null, '', href)
+    }
+  }
 
   return (
     <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
-        <a href="#hero" className="navbar-logo">
+        <a href="#hero" className="navbar-logo" onClick={(e) => handleLinkClick(e, '#hero')}>
           <span>{name}</span>
         </a>
 
         <nav className={`navbar-nav ${menuOpen ? 'open' : ''}`}>
           {navLinks.map(link => (
-            <a key={link.href} href={link.href} className="nav-link" onClick={handleLinkClick}>
+            <a key={link.href} href={link.href} className="nav-link" onClick={(e) => handleLinkClick(e, link.href)}>
               {link.label}
             </a>
           ))}

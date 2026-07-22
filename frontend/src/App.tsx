@@ -43,6 +43,19 @@ export default function App() {
       })
   }, [])
 
+  useEffect(() => {
+    if (loading || !data) return
+
+    const hash = window.location.hash
+    if (!hash) return
+
+    const id = hash.replace('#', '')
+    const el = document.getElementById(id)
+    if (el) {
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth' }), 100)
+    }
+  }, [loading, data])
+
   if (loading) {
     return (
       <div className="loading-screen">
