@@ -34,7 +34,7 @@ export default function App() {
       })
       .catch(() => {
         if (!cached) {
-          setError('The backend is waking up or temporarily unavailable. Please refresh in a minute.')
+          setError('The backend is waking up from sleep (takes ~60s on first visit). Please refresh the page.')
         }
       })
       .finally(() => {
