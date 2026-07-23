@@ -2,6 +2,10 @@ import type { ContactForm, PortfolioData } from '../types';
 
 const RAW_BASE = import.meta.env.VITE_API_URL || '';
 const BASE_URL = RAW_BASE ? RAW_BASE.replace(/\/+$/, '') + '/api' : '/api';
+
+if (!RAW_BASE && import.meta.env.PROD) {
+  console.error('[portfolio] VITE_API_URL is not set — API calls will fail in production.');
+}
 const PORTFOLIO_CACHE_KEY = 'portfolio:data';
 const DEFAULT_RETRIES = 4;
 const REQUEST_TIMEOUT_MS = 30000;
@@ -66,9 +70,20 @@ export async function submitContact(data: ContactForm): Promise<{ message: strin
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
-  if (!res.ok) {
-    const err = await res.json();
-    throw new Error(err.message || 'Failed to send message');
+
+  let body: Record<string, unknown> = {};
+  try {
+    body = await res.json();
+  } catch {
+    throw new Error('Backend is unavailable. Please try again later.');
   }
-  return res.json();
+
+  if (!res.ok) {
+    throw new Error(
+      typeof body.message === 'string' && body.message
+        ? body.message
+        : 'Failed to send message. Please try again.'
+    );
+  }
+  return body as { message: string };
 }
